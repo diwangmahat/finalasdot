@@ -1,0 +1,54 @@
+.record-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; /* Increased padding for larger container */
+    max-width: 100%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.record {
+    display: flex;
+    color: #3356d3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: #3356d3 solid;
+    padding: 20px; /* Increased padding for larger record */
+}
+
+.record:last-child {
+    border-right: none; /* Remove border from the last .record div */
+}
+
+.record h1 {
+    font-size: 2.5rem; /* Larger font size for h1 */
+    margin: 0; /* Remove default margins */
+}
+
+.record p {
+    font-size: 1.3rem; /* Adjust font size for p */
+    margin: 0; /* Remove default margins */
+}
+
+@media (max-width: 850px) {
+    .record-container {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .record {
+        border-right: none; /* Remove border for smaller screens */
+        border-bottom: #3356d3 solid; /* Add bottom border for separation */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .record h1 {
+        font-size: 2rem; /* Adjust h1 size for smaller screens */
+    }
+
+    .record p {
+        font-size: 1.1rem; /* Adjust p size for smaller screens */
+    }
+}

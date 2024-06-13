@@ -1,0 +1,54 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-category {
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-category:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-category h3 {
+  margin-top: 0;
+}
+
+.project-category img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.project-category ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.project-category li {
+  margin-bottom: 10px;
+}
+
+.project-category h4 {
+  margin: 0;
+}
+
+.project-category p {
+  margin: 0;
+}

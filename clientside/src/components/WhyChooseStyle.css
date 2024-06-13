@@ -1,0 +1,64 @@
+/* Feature Section Styles */
+.feature {
+  background-color: #ebe6f1;
+  margin-top: -1px;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Space between cards */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.header-card {
+  flex: 1 1 21%; /* Responsive flex-basis */
+  display: flex;
+  justify-content: center; /* Center the content */
+  padding: 0 0.75rem; /* Equal padding on left and right */
+  margin-top: 1rem; /* Adjust as needed */
+}
+
+.header-card div {
+  border-radius: 20px;
+  background: #fff;
+  color: #000;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.header-card div:hover {
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+}
+
+.header-card img {
+  width: 60px;
+}
+
+.header-card h4 {
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin: 20px 0 12px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header-card {
+    flex: 1 1 45%; /* Adjust for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-card {
+    flex: 1 1 100%; /* Full width for mobile */
+  }
+}
