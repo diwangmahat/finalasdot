@@ -37,6 +37,11 @@
   justify-content: end;
 }
 
+.nav-menu .active {
+  font-weight: bold; 
+  color: #3356d3;
+}
+
 .nav-links {
   color: #333;
   text-decoration: none;

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import f1 from "../assets/icon/feature1.png";
 import f2 from "../assets/icon/feature2.png";
 import f3 from "../assets/icon/feature3.png";
@@ -35,12 +37,18 @@ const features = [
     imgAlt: "Expert Team",
     title: "EXPERT TEAM",
     description:
-      "Trust in our expert team to deliver exceptional results, fueled by deep knowledge and unwavering dedication and greate results.",
+      "Trust in our expert team to deliver exceptional results, fueled by deep knowledge and unwavering dedication and great results.",
     animation: "fade-down"
   }
 ];
 
 function WhyChoose() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+    });
+  }, []);
+
   return (
     <section className="feature">
       <div className="container">

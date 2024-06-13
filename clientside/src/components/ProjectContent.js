@@ -31,37 +31,37 @@ const projects = [
   {
     category: "Development",
     name: "Development Project 1",
-    description: "Description of Development Project 1",
+    description: "Application and Web Development",
     image: dev1,
   },
   {
     category: "Development",
     name: "Development Project 2",
-    description: "Description of Development Project 2",
+    description: "Application and Web Development",
     image: dev2,
   },
   {
     category: "Marketing",
     name: "Marketing Project 1",
-    description: "Description of Marketing Project 1",
+    description: "Marketing Analysis",
     image: marketing1,
   },
   {
     category: "Marketing",
     name: "Marketing Project 2",
-    description: "Description of Marketing Project 2",
+    description: "content analysis",
     image: marketing2,
   },
   {
     category: "SEO",
     name: "SEO Project 1",
-    description: "Description of SEO Project 1",
+    description: "Seo Analysis",
     image: seo1,
   },
   {
     category: "SEO",
     name: "SEO Project 2",
-    description: "Description of SEO Project 2",
+    description: "Seo Analysis",
     image: seo2,
   },
   {
