@@ -54,19 +54,27 @@ const Record = () => {
   return (
     <div ref={recordRef} className='record-container'>
       <div className='record'>
-        <animated.h1>{clientsSpring.number.to(n => n.toFixed(0))}</animated.h1>
-        <p>satisfied clients</p>
+        <animated.h1>
+          {clientsSpring.number.to(n => `${n.toFixed(0)}+`)}
+        </animated.h1>
+        <p>Satisfied Clients</p>
       </div>
       <div className='record'>
-        <animated.h1>{teamMembersSpring.number.to(n => n.toFixed(0))}</animated.h1>
-        <p>Experienced team members</p>
+        <animated.h1>
+          {teamMembersSpring.number.to(n => `${n.toFixed(0)}+`)}
+        </animated.h1>
+        <p>Experienced Team Members</p>
       </div>
       <div className='record'>
-        <animated.h1>{experienceYearsSpring.number.to(n => n.toFixed(0))}</animated.h1>
+        <animated.h1>
+          {experienceYearsSpring.number.to(n => `${n.toFixed(0)}+`)}
+        </animated.h1>
         <p>Years of Experience</p>
       </div>
       <div className='record'>
-        <animated.h1>{completedProjectsSpring.number.to(n => n.toFixed(0))}</animated.h1>
+        <animated.h1>
+          {completedProjectsSpring.number.to(n => `${n.toFixed(0)}+`)}
+        </animated.h1>
         <p>Completed Projects</p>
       </div>
     </div>

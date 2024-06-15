@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
+  "short_name": "AsDot.",
   "name": "Create React App Sample",
+  "homepage":"asdot.com.au",
   "icons": [
     {
       "src": "favicon.ico",

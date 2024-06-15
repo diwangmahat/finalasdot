@@ -7,6 +7,14 @@ const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://asdot.com.au',
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
+}));
+
+
 app.use(bodyParser.json());
 
 app.use(express.json());

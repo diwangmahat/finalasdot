@@ -67,13 +67,13 @@ const projects = [
   {
     category: "UI/UX",
     name: "UI/UX Project 1",
-    description: "Description of UI/UX Project 1",
+    description: "Application desigm",
     image: uiux1,
   },
   {
     category: "UI/UX",
     name: "UI/UX Project 2",
-    description: "Description of UI/UX Project 2",
+    description: "Application desigm",
     image: uiux2,
   },
 ];
