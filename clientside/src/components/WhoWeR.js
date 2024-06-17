@@ -15,7 +15,7 @@ const features = [
   }
 ];
 
-const WhoWeR = () => {
+const WhoWeR = ({ hideDiscoverMore }) => {
   return (
     <>
       <div className="destination">
@@ -23,13 +23,11 @@ const WhoWeR = () => {
         <p>Explore Our Services And Boost Your Online Presence</p>
         <WhoWeRData
           className="first-des"
-          text="Welcome to Asdot Agency, where technology meets creativity. We are a leading IT and marketing agency dedicated 
-                to transforming businesses through innovative digital solutions. Our team of experts specializes in web development, 
-                digital marketing, SEO, and custom software solutions. We combine cutting-edge technology with strategic marketing 
-                to help you achieve your business goals. Partner with us for unparalleled growth and success in the digital world."
+          text="Welcome to Asdot Agency, where technology meets creativity. We are a leading IT and marketing agency dedicated to transforming businesses through innovative digital solutions. Our team of experts specializes in web development, digital marketing, SEO, and custom software solutions. We combine cutting-edge technology with strategic marketing to help you achieve your business goals. Partner with us for unparalleled growth and success in the digital world."
           img1={about1}
           img2={about2}
           features={features}
+          hideDiscoverMore={hideDiscoverMore}
         />
       </div>
     </>

@@ -11,17 +11,23 @@ import CallInfo from "../components/callInfo";
 
 
 function Home() {
+  const heroImages = [
+    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  ];
   return (
     <>
       <Navbar />
       <HomeHero
         cName="hero"
-        heroImg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        heroImgs={heroImages}
         title="LET'S GROW TOGETHER"
         text="YOU HAVE BUSINESS & WE HAVE STRATEGY."
         btnClass="show"
         buttonText="GET STARTED"
         url="/contact"
+        intervalTime={3000} // 3 seconds interval
       />
       
       <WhoWeR />

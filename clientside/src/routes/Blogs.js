@@ -1,4 +1,4 @@
-import HomeHero from "../components/HomeHero";
+import Banner from "../components/Banner";
 import BlogImg from "../assets/website/blog.jpg";
 import Navbar from "../components/Navbar";
 import BlogList from "../components/BlogLists";
@@ -9,11 +9,10 @@ function Blogs() {
   return (
     <>
       <Navbar />
-      <HomeHero
+      <Banner
         cName="hero-mid"
         heroImg={BlogImg}
         title="Blogs"
-        btnClass="hide"
       />
       <BlogList />
       <Subscribe />

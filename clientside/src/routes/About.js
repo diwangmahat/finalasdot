@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import HomeHero from "../components/HomeHero";
+import Banner from "../components/Banner";
 import AboutUs from "../components/AboutUs";
 import Footer from "../components/Footer";
 import AboutImg from "../assets/website/about-us.jpg";
@@ -12,14 +12,13 @@ function About() {
   return (
     <>
       <Navbar />
-      <HomeHero
+      <Banner
         cName="hero-mid"
         heroImg={AboutImg}
         title="About"
-        btnClass="hide"
       />
       <AboutUs />
-      <WhoWeR />
+      <WhoWeR hideDiscoverMore={true} />
       <WhyChoose />
       <CallInfo />
       <Subscribe />

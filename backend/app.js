@@ -9,9 +9,9 @@ const app = express();
 
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://asdot.com.au',
+ /* origin: 'https://asdot.com.au',
   methods: 'GET,POST,PUT,DELETE',
-  credentials: true
+  credentials: true*/
 }));
 
 

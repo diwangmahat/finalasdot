@@ -1,4 +1,36 @@
-/* General Styles */
+/* Animation Styles */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image-left {
+  animation: slideInFromLeft 2s ease forwards;
+}
+
+.image-right {
+  animation: slideInFromRight 2s ease forwards;
+}
+
+
+/*Component Styles */
 .destination {
   margin: 4rem 6rem;
   color: #2a2a2a;

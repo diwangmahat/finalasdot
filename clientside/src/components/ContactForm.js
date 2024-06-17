@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./ContactFormStyles.css"; // Assuming you have the styles in a separate CSS file
 
 function ContactForm() {
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  const [PhoneError, setPhoneError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -12,6 +14,12 @@ function ContactForm() {
     message: "",
   });
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+    });
+  }, []);
 
   const handleNameChange = (event) => {
     const value = event.target.value;
@@ -27,10 +35,10 @@ function ContactForm() {
     setFormData({ ...formData, email: value });
   };
 
-  const handlephoneNumberChange = (event) => {
+  const handlePhoneNumberChange = (event) => {
     const value = event.target.value;
     const regex = /^[0-9\b]+$/;
-    setPhoneError(!regex.test(value));
+    setPhoneError(!regex.test(value) || value.length !== 10);
     setFormData({ ...formData, phoneNumber: value });
   };
 
@@ -44,32 +52,38 @@ function ContactForm() {
 
     const { fullName, email, message, phoneNumber } = formData;
 
+    if (phoneNumber.length !== 10) {
+      setPhoneError(true);
+      setMessage("Phone number must be exactly 10 digits");
+      return;
+    }
+
     try {
-      const response = await fetch(
-        "http://localhost:3011/api/users/sendMessage",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ fullName, email, message, phoneNumber }),
-        }
-      ).catch((error) => {
-        // Handle network errors
-        console.error("Network error:", error);
-        setMessage("Network error");
-        alert("Network error");
+      const response = await fetch("http://localhost:3011/api/users/sendMessage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ fullName, email, message, phoneNumber }),
       });
 
-      if (response && response.ok) {
+      if (response.ok) {
         setMessage("Message sent successfully!");
         alert("Message sent successfully!");
       } else {
-        setMessage("Error sending message");
-        alert("Error sending message");
+        const errorData = await response.json();
+        if (errorData.error === "Email already used") {
+          setMessage("Email already used");
+          alert("Email already used");
+        } else if (errorData.error === "Phone number already used") {
+          setMessage("Phone number already used");
+          alert("Phone number already used");
+        } else {
+          setMessage("Error sending message");
+          alert("Error sending message");
+        }
       }
     } catch (error) {
-      // Handle other errors
       console.error("Error:", error);
       setMessage("Error sending message");
       alert("Error sending message");
@@ -80,7 +94,7 @@ function ContactForm() {
     <div className="container-contact">
       <div className="row">
         <div className="contact-info">
-          <div className="contact-info-item">
+          <div className="contact-info-item" data-aos="fade-up">
             <div className="contact-info-icon">
               <i className="fas fa-home"></i>
             </div>
@@ -94,7 +108,7 @@ function ContactForm() {
             </div>
           </div>
 
-          <div className="contact-info-item">
+          <div className="contact-info-item" data-aos="fade-up" data-aos-delay="100">
             <div className="contact-info-icon">
               <i className="fas fa-phone"></i>
             </div>
@@ -104,7 +118,7 @@ function ContactForm() {
             </div>
           </div>
 
-          <div className="contact-info-item">
+          <div className="contact-info-item" data-aos="fade-up" data-aos-delay="200">
             <div className="contact-info-icon">
               <i className="fas fa-envelope"></i>
             </div>
@@ -115,7 +129,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div className="contact-form">
+        <div className="contact-form" data-aos="fade-up">
           <form onSubmit={handleSubmit} id="contact-form">
             <h2>Send Message</h2>
             <div className={`input-box ${nameError ? "invalid" : ""}`}>
@@ -139,12 +153,12 @@ function ContactForm() {
               <span>Email</span>
             </div>
 
-            <div className={`input-box ${PhoneError ? "invalid" : ""}`}>
+            <div className={`input-box ${phoneError ? "invalid" : ""}`}>
               <input
                 type="phone"
                 name="phone"
                 required
-                onChange={handlephoneNumberChange}
+                onChange={handlePhoneNumberChange}
               />
               <span>Phone</span>
             </div>
@@ -162,6 +176,7 @@ function ContactForm() {
               <input type="submit" value="Send" />
             </div>
           </form>
+          {message && <p className="error-message">{message}</p>}
         </div>
       </div>
     </div>

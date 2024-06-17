@@ -1,8 +1,10 @@
+/* General hero styles */
 .hero {
   width: 100%;
   height: 100vh;
   position: relative;
 }
+
 .hero-mid {
   width: 100%;
   height: 70vh;
@@ -31,6 +33,7 @@ img {
   z-index: 1; /* Ensure it appears above the image */
 }
 
+/* Text overlay styles */
 .hero-text {
   position: absolute;
   top: 55%;
@@ -54,10 +57,12 @@ img {
   padding: 0.5rem 0 2rem 0;
 }
 
-.show{
+/* Button styles */
+.show {
   background-color: #6048d7;
   color: #f4f4f4;
 }
+
 .hero-text .show {
   text-decoration: none;
   background: #fff;
@@ -67,12 +72,19 @@ img {
   font-weight: bold;
   letter-spacing: 2px;
   color: #222;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-text .show:hover {
+  transform: scale(1.05); /* Pop-up effect */
+  background-color: #e0e0e0; /* Slightly different background on hover */
 }
 
 .hero-text .hide {
   display: none;
 }
 
+/* Responsive styles */
 @media screen and (max-width: 555px) {
   .hero-text h1 {
     padding: 10px 20px;

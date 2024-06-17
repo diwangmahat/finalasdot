@@ -1,16 +1,15 @@
-import HomeHero from "../components/HomeHero";
 import PolicyImg from "../assets/website/plainbg.jpg";
 import Footer from "../components/Footer";
 import PolicyDetail from "../components/PolicyDetail";
+import Banner from "../components/Banner";
 
 function Policy() {
   return (
     <>
-      <HomeHero
+      <Banner
         cName="hero-mid"
         heroImg={PolicyImg}
         title="Privacy Policy"
-        btnClass="hide"
       />
       <PolicyDetail />
       <Footer />
