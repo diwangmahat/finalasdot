@@ -77,7 +77,8 @@ img {
 
 .hero-text .show:hover {
   transform: scale(1.05); /* Pop-up effect */
-  background-color: #e0e0e0; /* Slightly different background on hover */
+  color: #fff;
+  background-color: #3356d3; /* Slightly different background on hover */
 }
 
 .hero-text .hide {

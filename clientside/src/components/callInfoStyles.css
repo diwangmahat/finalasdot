@@ -64,6 +64,7 @@
 
 .num h3 {
     margin: 0.5rem 0 0 0;
+    padding-left: 20px;
 }
 
 @media (max-width: 1200px) {
@@ -84,12 +85,13 @@
     .text {
         margin-left: 0; 
         max-width: 100%; 
-        text-align: justify; 
+        text-align: center; 
     }
 
     .contact {
         flex-direction: column;
         align-items: center;
+        text-align: center;
         margin-top: 1rem;
     }
 
@@ -106,6 +108,7 @@
     }
 
     .num h3 {
+        padding-left: 25px;
         text-align: center; /* Center align the call to action text */
     }
 }

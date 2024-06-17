@@ -4,77 +4,36 @@ import "./ProjectContentStyle.css";
 //import images
 import design1 from "../assets/gallery/Design1.png";
 import design2 from "../assets/gallery/Design2.jpg";
-import dev1 from "../assets/gallery/Development1.jpg";
-import dev2 from "../assets/gallery/Development2.jpg";
-import marketing1 from "../assets/gallery/marketing1.png";
-import marketing2 from "../assets/gallery/marketing2.jpg";
-import seo1 from "../assets/gallery/Seo-design1.png";
-import seo2 from "../assets/gallery/Seo-design2.jpg";
-import uiux1 from "../assets/gallery/Uiux-design1.jpg";
-import uiux2 from "../assets/gallery/Uiux-design2.jpg";
-
+import design3 from "../assets/gallery/Design3.jpg";
+import design4 from "../assets/gallery/Design3.jpg";
+import design5 from "../assets/gallery/Design4.jpg";
+import design6 from "../assets/gallery/Design5.jpg";
 
 // Sample project data
 const projects = [
   {
-    category: "Designing",
-    name: "Design Project 1",
-    description: "Logo Design",
+    category: "Design 1",
     image: design1,
   },
   {
-    category: "Designing",
-    name: "Design Project 2",
-    description: "Logo Design",
+    category: "Design 2",
     image: design2,
   },
   {
-    category: "Development",
-    name: "Development Project 1",
-    description: "Application and Web Development",
-    image: dev1,
+    category: "Design 3",
+    image: design3,
   },
   {
-    category: "Development",
-    name: "Development Project 2",
-    description: "Application and Web Development",
-    image: dev2,
+    category: "Design 4",
+    image: design4,
   },
   {
-    category: "Marketing",
-    name: "Marketing Project 1",
-    description: "Marketing Analysis",
-    image: marketing1,
+    category: "Design 5",
+    image: design5,
   },
   {
-    category: "Marketing",
-    name: "Marketing Project 2",
-    description: "content analysis",
-    image: marketing2,
-  },
-  {
-    category: "SEO",
-    name: "SEO Project 1",
-    description: "Seo Analysis",
-    image: seo1,
-  },
-  {
-    category: "SEO",
-    name: "SEO Project 2",
-    description: "Seo Analysis",
-    image: seo2,
-  },
-  {
-    category: "UI/UX",
-    name: "UI/UX Project 1",
-    description: "Application desigm",
-    image: uiux1,
-  },
-  {
-    category: "UI/UX",
-    name: "UI/UX Project 2",
-    description: "Application desigm",
-    image: uiux2,
+    category: "Design 6",
+    image: design6,
   },
 ];
 
@@ -82,7 +41,7 @@ function ProjectContent() {
   return (
     <div className="projects-container">
       <div className="projects">
-        {["Designing", "Development", "Marketing", "SEO", "UI/UX"].map(
+        {["Design 1", "Design 2", "Design 3", "Design 4", "Design 5", "Design 6"].map(
           (category) => (
             <div key={category} className="project-category">
               <h3>{category}</h3>
@@ -91,8 +50,6 @@ function ProjectContent() {
                   .filter((project) => project.category === category)
                   .map((project) => (
                     <li key={project.name}>
-                      <h4>{project.name}</h4>
-                      <p>{project.description}</p>
                       <img
                         src={project.image}
                         alt={project.name}
