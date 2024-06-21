@@ -10,7 +10,7 @@ function Subscribe() {
 
     try {
       const response = await fetch(
-        "http://localhost:3011/api/users/subscribe",
+        "https://api.asdot.com.au/subscribe",
         {
           method: "POST",
           headers: {

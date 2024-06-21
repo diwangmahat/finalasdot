@@ -59,7 +59,7 @@ function ContactForm() {
     }
 
     try {
-      const response = await fetch("http://localhost:3011/api/users/sendMessage", {
+      const response = await fetch("https://api.asdot.com.au/sendMessage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
