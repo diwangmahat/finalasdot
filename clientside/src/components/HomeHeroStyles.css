@@ -3,12 +3,14 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .hero-mid {
   width: 100%;
   height: 70vh;
   position: relative;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .hero-mid h1 {
@@ -41,6 +43,9 @@ img {
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: 2;
+  text-align: center; /* Ensure text is centered */
+  padding: 0 20px; /* Add padding to prevent overflow */
+  box-sizing: border-box;
 }
 
 .hero-text h1 {
@@ -49,12 +54,14 @@ img {
   background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0; /* Remove default margin */
 }
 
 .hero-text p {
   color: #f4f4f4;
   font-size: 1.8rem;
   padding: 0.5rem 0 2rem 0;
+  margin: 0; /* Remove default margin */
 }
 
 /* Button styles */
@@ -88,6 +95,7 @@ img {
 /* Responsive styles */
 @media screen and (max-width: 555px) {
   .hero-text h1 {
+    font-size: 2rem;
     padding: 10px 20px;
   }
   .hero-text p {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
-import logo from "../assets/main-logo/asdot.png";
+import logo from "../assets/main-logo/asdot.png"
 import "./NavbarStyles.css";
 
 class Navbar extends Component {
@@ -15,7 +15,7 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         <a href="/" className="navbar-logoLink">
-          <img src={logo} alt="logo" className="main-logo" />
+          <img src={logo} alt="logo" className="main-logo"/>
         </a>
         <div className="menu-icons" onClick={this.handleClick}>
           <i
@@ -27,15 +27,10 @@ class Navbar extends Component {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <NavLink
-                  className={item.cName}
-                  to={item.url}
-                  activeClassName="active"
-                  exact
-                >
+                <Link className={item.cName} to={item.url}>
                   <i className={item.icon}></i>
                   {item.title}
-                </NavLink>
+                </Link>
               </li>
             );
           })}

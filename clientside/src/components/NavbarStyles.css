@@ -37,11 +37,6 @@
   justify-content: end;
 }
 
-.nav-menu .active {
-  font-weight: bold; 
-  color: #3356d3;
-}
-
 .nav-links {
   color: #333;
   text-decoration: none;
@@ -88,7 +83,7 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .NavbarItems {
     z-index: 99;
   }
@@ -170,7 +165,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .main-logo {
     height: 50px;
     max-width: 110px;

@@ -1,36 +1,36 @@
 /* Animation Styles */
-@keyframes slideInFromLeft {
+@keyframes slideInFromTop {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes slideInFromBottom {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-.image-left {
-  animation: slideInFromLeft 2s ease forwards;
+.image-top {
+  animation: slideInFromTop 2s ease forwards;
 }
 
-.image-right {
-  animation: slideInFromRight 2s ease forwards;
+.image-bottom {
+  animation: slideInFromBottom 2s ease forwards;
 }
 
 
-/*Component Styles */
+/* Component Styles */
 .destination {
   margin: 4rem 6rem;
   color: #2a2a2a;
@@ -86,7 +86,12 @@
   box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
 }
 
+.image img:nth-child(1) {
+  animation: slideInFromTop 2s ease forwards;
+}
+
 .image img:nth-child(2) {
+  animation: slideInFromBottom 2s ease forwards;
   position: absolute;
   top: -10%;
   right: 0;

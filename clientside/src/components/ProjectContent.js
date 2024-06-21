@@ -5,9 +5,9 @@ import "./ProjectContentStyle.css";
 import design1 from "../assets/gallery/Design1.png";
 import design2 from "../assets/gallery/Design2.jpg";
 import design3 from "../assets/gallery/Design3.jpg";
-import design4 from "../assets/gallery/Design3.jpg";
-import design5 from "../assets/gallery/Design4.jpg";
-import design6 from "../assets/gallery/Design5.jpg";
+import design4 from "../assets/gallery/Design4.jpg";
+import design5 from "../assets/gallery/Design5.jpg";
+import design6 from "../assets/gallery/Design6.jpg";
 
 // Sample project data
 const projects = [
